@@ -64,20 +64,20 @@
 		}
 	}];
 	
-	[self.easyTable setConfigureCellAtIndexPath:^(UITableView *tableView, UITableViewCell *cell, NSIndexPath *indexPath) {
+	[self.easyTable setConfigureCellAtIndexPath:^(UITableView *tableView, UITableViewCell<AMPEasyTableViewCell> *cell, NSIndexPath *indexPath) {
 		
 		NSObject *item = weakSelf.items[indexPath.row];
 		
-		[((AMPEasyTableViewCell *)cell) configureCellWithData:item];
+		[cell configureCellWithData:item];
 		
 		if ([item isKindOfClass:[CellBData class]]) {
 			
-			[((AMPEasyTableViewCell *)cell) setOnEvent:^(NSInteger event, NSObject *eventData) {
+			[cell setOnEvent:^(NSInteger event, NSObject *eventData) {
 				
 				[weakSelf showAlert];
 				
 			}];
-		}
+		}		
 	}];
 	
 }

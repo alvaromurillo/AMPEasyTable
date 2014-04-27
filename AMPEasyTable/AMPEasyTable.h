@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AMPEasyTableViewCell.h"
 
 @interface AMPEasyTable : NSObject
 
@@ -63,5 +62,17 @@
 @property (nonatomic, copy) BOOL (^shouldShowMenuForRowAtIndexPath)(UITableView *tableView, NSIndexPath *indexPath);
 @property (nonatomic, copy) BOOL (^canPerformActionForRowAtIndexPathWithSender)(UITableView *tableView, SEL action, NSIndexPath *indexPath, id sender);
 @property (nonatomic, copy) void (^performActionForRowAtIndexPathWithSender)(UITableView *tableView, SEL action, NSIndexPath *indexPath, id sender);
+
+@end
+
+@protocol AMPEasyTableViewCell <NSObject>
+
+@property (nonatomic, readonly) BOOL dynamicHeight;
+
+- (void)configureCellWithData:(NSObject *)data;
+
+@optional
+
+@property (nonatomic, copy) void (^onEvent)(NSInteger event, NSObject *eventData);
 
 @end

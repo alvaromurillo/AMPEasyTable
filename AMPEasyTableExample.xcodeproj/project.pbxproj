@@ -21,7 +21,6 @@
 		380AB0C0190804450069B65E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 380AB0BE190804450069B65E /* InfoPlist.strings */; };
 		380AB0C2190804450069B65E /* AMPEasyTableExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AB0C1190804450069B65E /* AMPEasyTableExampleTests.m */; };
 		380AB0CE190804BF0069B65E /* AMPEasyTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AB0CD190804BF0069B65E /* AMPEasyTable.m */; };
-		380AB0D11908055C0069B65E /* AMPEasyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AB0D01908055C0069B65E /* AMPEasyTableViewCell.m */; };
 		380AB0D71908067B0069B65E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AB0D61908067B0069B65E /* ViewController.m */; };
 		380AB0DA190806B70069B65E /* CellAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AB0D9190806B70069B65E /* CellAData.m */; };
 		380AB0DD190806F10069B65E /* CellBData.m in Sources */ = {isa = PBXBuildFile; fileRef = 380AB0DC190806F10069B65E /* CellBData.m */; };
@@ -63,8 +62,6 @@
 		380AB0C1190804450069B65E /* AMPEasyTableExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMPEasyTableExampleTests.m; sourceTree = "<group>"; };
 		380AB0CC190804BF0069B65E /* AMPEasyTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPEasyTable.h; sourceTree = "<group>"; };
 		380AB0CD190804BF0069B65E /* AMPEasyTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPEasyTable.m; sourceTree = "<group>"; };
-		380AB0CF1908055C0069B65E /* AMPEasyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPEasyTableViewCell.h; sourceTree = "<group>"; };
-		380AB0D01908055C0069B65E /* AMPEasyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPEasyTableViewCell.m; sourceTree = "<group>"; };
 		380AB0D51908067B0069B65E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		380AB0D61908067B0069B65E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		380AB0D8190806B70069B65E /* CellAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellAData.h; sourceTree = "<group>"; };
@@ -187,8 +184,6 @@
 			children = (
 				380AB0CC190804BF0069B65E /* AMPEasyTable.h */,
 				380AB0CD190804BF0069B65E /* AMPEasyTable.m */,
-				380AB0CF1908055C0069B65E /* AMPEasyTableViewCell.h */,
-				380AB0D01908055C0069B65E /* AMPEasyTableViewCell.m */,
 			);
 			path = AMPEasyTable;
 			sourceTree = "<group>";
@@ -329,7 +324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380AB0D11908055C0069B65E /* AMPEasyTableViewCell.m in Sources */,
 				380AB0CE190804BF0069B65E /* AMPEasyTable.m in Sources */,
 				380AB0E319080C250069B65E /* TypeBCell.m in Sources */,
 				380AB0EF19081AEB0069B65E /* CellCData.m in Sources */,
@@ -544,6 +538,7 @@
 				380AB0C7190804450069B65E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		380AB0C8190804450069B65E /* Build configuration list for PBXNativeTarget "AMPEasyTableExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +547,7 @@
 				380AB0CA190804450069B65E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

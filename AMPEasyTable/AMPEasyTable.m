@@ -84,10 +84,8 @@
 	
 	NSString *identifier = self.identifierForCellAtIndexPath(tableView, indexPath);
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-	if ([cell isKindOfClass:[AMPEasyTableViewCell class]]) {
-		if (self.configureCellAtIndexPath) {
-			self.configureCellAtIndexPath(tableView, cell, indexPath);
-		}
+	if (self.configureCellAtIndexPath) {
+		self.configureCellAtIndexPath(tableView, cell, indexPath);
 	}
 	return cell;
 }
@@ -230,14 +228,25 @@
 		
 		NSString *identifier = self.identifierForCellAtIndexPath(tableView, indexPath);
 		UITableViewCell *cell = [self.cellPrototypes objectForKey:identifier];
+		
 		if (!cell) {
+			
 			cell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
+			
 			[self.cellPrototypes setObject:cell forKey:identifier];
 		}
-		if ([cell isKindOfClass:[AMPEasyTableViewCell class]] && ((AMPEasyTableViewCell *)cell).dynamicHeight && self.configureCellAtIndexPath) {
+		
+		if ([cell conformsToProtocol:@protocol(AMPEasyTableViewCell)] && ((UITableViewCell<AMPEasyTableViewCell> *)cell).dynamicHeight && self.configureCellAtIndexPath) {
+			
 			self.configureCellAtIndexPath(tableView, cell, indexPath);
+			
 			[cell layoutIfNeeded];
+			
 			height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+			
+			// Add cell separator point
+			height = height + 1;
+			
 		} else {
 			height = cell.frame.size.height;
 		}

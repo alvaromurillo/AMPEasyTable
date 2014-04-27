@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AMPEasyTableViewCell.h"
+#import "AMPEasyTable.h"
 
-@interface TypeBCell : AMPEasyTableViewCell
+@interface TypeBCell : UITableViewCell <AMPEasyTableViewCell>
+
+@property (nonatomic, readonly) BOOL dynamicHeight;
+
+- (void)configureCellWithData:(NSObject *)data;
+
+@property (nonatomic, copy) void (^onEvent)(NSInteger event, NSObject *eventData);
 
 @end
