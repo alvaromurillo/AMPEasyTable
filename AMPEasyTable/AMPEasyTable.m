@@ -437,4 +437,101 @@
 	}
 }
 
+#pragma mark – UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewDidScroll) {
+        self.scrollViewDidScroll(scrollView);
+    }
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewDidZoom) {
+        self.scrollViewDidZoom(scrollView);
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewWillBeginDragging) {
+        self.scrollViewWillBeginDragging(scrollView);
+    }
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    
+    if (self.scrollViewWillEndDraggingWithVelocityTargetContentOffset) {
+        self.scrollViewWillEndDraggingWithVelocityTargetContentOffset(scrollView, velocity, targetContentOffset);
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    
+    if (self.scrollViewDidEndDraggingWillDecelerate) {
+        self.scrollViewDidEndDraggingWillDecelerate(scrollView, decelerate);
+    }
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewWillBeginDecelerating) {
+        self.scrollViewWillBeginDecelerating(scrollView);
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewDidEndDecelerating) {
+        self.scrollViewDidEndDecelerating(scrollView);
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewDidEndScrollingAnimation) {
+        self.scrollViewDidEndScrollingAnimation(scrollView);
+    }
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    
+    if (self.viewForZoomingInScrollView) {
+        return self.viewForZoomingInScrollView(scrollView);
+    } else {
+        return nil;
+    }
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
+    
+    if (self.scrollViewWillBeginZoomingWithView) {
+        self.scrollViewWillBeginZoomingWithView(scrollView, view);
+    }
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
+    
+    if (self.scrollViewDidEndZoomingWithViewAtScale) {
+        self.scrollViewDidEndZoomingWithViewAtScale(scrollView, view, scale);
+    }
+}
+
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewShouldScrollToTop) {
+        return self.scrollViewShouldScrollToTop(scrollView);
+    } else {
+        return YES;
+    }
+}
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+    
+    if (self.scrollViewDidScrollToTop) {
+        self.scrollViewDidScrollToTop(scrollView);
+    }
+}
+
 @end

@@ -63,6 +63,21 @@
 @property (nonatomic, copy) BOOL (^canPerformActionForRowAtIndexPathWithSender)(UITableView *tableView, SEL action, NSIndexPath *indexPath, id sender);
 @property (nonatomic, copy) void (^performActionForRowAtIndexPathWithSender)(UITableView *tableView, SEL action, NSIndexPath *indexPath, id sender);
 
+// UIScrollViewDelegate blocks
+@property (nonatomic, copy) void (^scrollViewDidScroll)(UIScrollView *scrollView);
+@property (nonatomic, copy) void (^scrollViewDidZoom)(UIScrollView *scrollView);
+@property (nonatomic, copy) void (^scrollViewWillBeginDragging)(UIScrollView *scrollView);
+@property (nonatomic, copy) void (^scrollViewWillEndDraggingWithVelocityTargetContentOffset)(UIScrollView *scrollView, CGPoint velocity, CGPoint *targetContentOffset);
+@property (nonatomic, copy) void (^scrollViewDidEndDraggingWillDecelerate)(UIScrollView *scrollView, BOOL decelerate);
+@property (nonatomic, copy) void (^scrollViewWillBeginDecelerating)(UIScrollView *scrollView);
+@property (nonatomic, copy) void (^scrollViewDidEndDecelerating)(UIScrollView *scrollView);
+@property (nonatomic, copy) void (^scrollViewDidEndScrollingAnimation)(UIScrollView *scrollView);
+@property (nonatomic, copy) UIView *(^viewForZoomingInScrollView)(UIScrollView *scrollView);
+@property (nonatomic, copy) void (^scrollViewWillBeginZoomingWithView)(UIScrollView *scrollView, UIView *view);
+@property (nonatomic, copy) void (^scrollViewDidEndZoomingWithViewAtScale)(UIScrollView *scrollView, UIView *view, CGFloat scale);
+@property (nonatomic, copy) BOOL (^scrollViewShouldScrollToTop)(UIScrollView *scrollView);
+@property (nonatomic, copy) void (^scrollViewDidScrollToTop)(UIScrollView *scrollView);
+
 @end
 
 @protocol AMPEasyTableViewCell <NSObject>
