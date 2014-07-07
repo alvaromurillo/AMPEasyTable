@@ -326,7 +326,7 @@
 	if (self.willSelectRowAtIndexPath) {
 		return self.willSelectRowAtIndexPath(tableView, indexPath);
 	} else {
-		return nil;
+		return indexPath;
 	}
 }
 
@@ -335,7 +335,7 @@
 	if (self.willDeselectRowAtIndexPath) {
 		return self.willDeselectRowAtIndexPath(tableView, indexPath);
 	} else {
-		return nil;
+		return indexPath;
 	}
 }
 
